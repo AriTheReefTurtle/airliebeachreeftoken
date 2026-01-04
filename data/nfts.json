@@ -1,0 +1,26 @@
+[
+  {
+    "id": 201,
+    "title": "Guardian Trident",
+    "description": "A legendary NFT symbolizing protection of the ocean realms.",
+    "price": 50,
+    "rarity": "legendary",
+    "imageUrl": "/images/nfts/guardian-trident.jpg",
+    "tags": ["nft", "legendary", "ocean"],
+    "condition": "new",
+    "location": "Digital",
+    "contact": "support@arisreef.com"
+  },
+  {
+    "id": 202,
+    "title": "Reef Spirit",
+    "description": "A rare spirit creature representing the resilience of coral ecosystems.",
+    "price": 25,
+    "rarity": "rare",
+    "imageUrl": "https://simbolistica.com/wp-content/uploads/2021/03/trident-1.jpg",
+    "tags": ["nft", "rare", "coral"],
+    "condition": "new",
+    "location": "Digital",
+    "contact": "support@arisreef.com"
+  }
+]
