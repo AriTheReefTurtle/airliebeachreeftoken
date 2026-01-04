@@ -1,0 +1,181 @@
+/* -------------------------------------------------- */
+/* RESET + BASE */
+/* -------------------------------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* -------------------------------------------------- */
+/* THEME SYSTEM — 4 THEMES (2 dark, 2 light) */
+/* -------------------------------------------------- */
+
+/* 1. REEF BLUE — DARK */
+.reef-blue {
+  --reef-bg: #071a2a; /* deep ocean */
+  --reef-text: #e8f6ff; /* soft aqua white */
+  --reef-card: rgba(255, 255, 255, 0.08);
+  --reef-accent: #1da1f2; /* reef blue */
+
+  background: var(--reef-bg);
+  color: var(--reef-text);
+}
+
+/* 2. RED CORAL — DARK */
+.red-coral {
+  --reef-bg: #1a0c0c; /* volcanic coral dark */
+  --reef-text: #ffeceb; /* soft coral white */
+  --reef-card: rgba(255, 110, 97, 0.15);
+  --reef-accent: #ff6f61; /* coral red */
+
+  background: var(--reef-bg);
+  color: var(--reef-text);
+}
+
+/* 3. TURTLE GREEN — LIGHT */
+.turtle-green {
+  --reef-bg: #e8f7ec; /* pale green */
+  --reef-text: #0a2a43; /* deep ocean blue for readability */
+  --reef-card: rgba(0, 0, 0, 0.05);
+  --reef-accent: #2ecc71; /* turtle green */
+
+  background: var(--reef-bg);
+  color: var(--reef-text);
+}
+
+/* 4. SAND BEIGE — LIGHT */
+.sand-beige {
+  --reef-bg: #f5debe; /* warm sand */
+  --reef-text: #0a2a43; /* deep ocean blue for readability */
+  --reef-card: rgba(0, 0, 0, 0.05);
+  --reef-accent: #d28f5a; /* warm dune accent */
+
+  background: var(--reef-bg);
+  color: var(--reef-text);
+}
+
+/* -------------------------------------------------- */
+/* SHARED COMPONENTS USING THEME VARIABLES */
+/* -------------------------------------------------- */
+
+/* Cards */
+.card {
+  background: var(--reef-card);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 16px;
+  border-radius: 16px;
+  transition: background 0.3s ease, border 0.3s ease;
+}
+
+/* XP bar */
+.xp-bar {
+  height: 10px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.15);
+  overflow: hidden;
+}
+
+.xp-fill {
+  height: 100%;
+  background: var(--reef-accent);
+  transition: width 0.4s ease;
+  box-shadow: 0 0 8px var(--reef-accent);
+}
+
+/* -------------------------------------------------- */
+/* AVATAR RING */
+/* -------------------------------------------------- */
+
+.avatar-ring {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-ring::before {
+  content: "";
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 4px solid rgba(29, 161, 242, 0.4);
+  box-shadow: 0 0 12px rgba(29, 161, 242, 0.6);
+  transition: transform 0.4s ease;
+}
+
+.avatar-ring.level-up::before {
+  transform: scale(1.15);
+}
+
+/* -------------------------------------------------- */
+/* ACHIEVEMENT POPUP */
+/* -------------------------------------------------- */
+
+.achievement-popup {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 14px 22px;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  text-align: center;
+  animation: achievementFade 2.5s ease forwards;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.25);
+}
+
+@keyframes achievementFade {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+}
+
+/* -------------------------------------------------- */
+/* UTILITY COLORS */
+/* -------------------------------------------------- */
+
+.text-sand-beige {
+  color: #f5debe;
+}
+
+.text-reef-blue {
+  color: #1da1f2;
+}
+
+.text-turtle-green {
+  color: #2ecc71;
+}
+
+.bg-reef-blue {
+  background: #1da1f2;
+}
+
+.bg-turtle-green {
+  background: #2ecc71;
+}
