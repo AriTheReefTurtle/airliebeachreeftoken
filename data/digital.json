@@ -1,0 +1,24 @@
+[
+  {
+    "id": 101,
+    "title": "Ocean Wallpaper Pack",
+    "description": "A collection of high‑resolution ocean‑themed wallpapers for mobile and desktop.",
+    "price": 4.99,
+    "imageUrl": "/images/items/wallpaper-pack.jpg",
+    "tags": ["digital", "wallpaper", "ocean"],
+    "condition": "new",
+    "location": "Digital",
+    "contact": "support@arisreef.com"
+  },
+  {
+    "id": 102,
+    "title": "Reef Soundscape",
+    "description": "A calming underwater audio track recorded near real coral reefs.",
+    "price": 2.99,
+    "imageUrl": "/images/items/reef-soundscape.jpg",
+    "tags": ["audio", "relaxation", "ocean"],
+    "condition": "new",
+    "location": "Digital",
+    "contact": "support@arisreef.com"
+  }
+]
